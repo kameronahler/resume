@@ -1,4 +1,5 @@
-.gitattributes
 .cache
+.env
+.gitattributes
 dist
 node_modules
