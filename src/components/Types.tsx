@@ -1,5 +1,5 @@
 // public
-export interface EntryProps {
+export interface PropsEntry {
   dateEnd?: string
   dateStart?: string
   description?: string
@@ -17,4 +17,4 @@ export interface PropsEntryList {
   }
 }
 
-export type ContentfulPostsArr = Object[] | unknown[] | null
+export type TypeContentfulPosts = Object[] | unknown[] | null

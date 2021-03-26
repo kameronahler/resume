@@ -1,5 +1,5 @@
 import React from 'react'
-import { EntryProps } from './Types'
+import { PropsEntry } from './Types'
 import EntryYear from './EntryYear'
 import EntryList from './EntryList'
 
@@ -9,7 +9,7 @@ const Entry = ({
   description,
   listJSON,
   title,
-}: EntryProps) => {
+}: PropsEntry) => {
   return (
     <div>
       {title && <h1>{title}</h1>}

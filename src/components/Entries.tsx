@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { ContentfulPostsArr } from './Types'
+import { TypeContentfulPosts } from './Types'
 import { createClient } from 'contentful'
 import Entry from './Entry'
 
@@ -13,7 +13,7 @@ const contentfulClient = createClient({
 })
 
 const Entries = () => {
-  const [contentfulPosts, setContentfulPosts] = useState<ContentfulPostsArr>(
+  const [contentfulPosts, setContentfulPosts] = useState<TypeContentfulPosts>(
     null
   )
 
