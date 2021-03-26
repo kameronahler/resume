@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { PropsEntryYear } from './Types'
 
 const EntryYear = ({ dateEnd, dateStart }: PropsEntryYear) => {

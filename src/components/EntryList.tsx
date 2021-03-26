@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { PropsEntryList } from './Types'
 
 const EntryList = ({ listJSON }: PropsEntryList) => {

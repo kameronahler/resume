@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import { TypeContentfulPosts } from './Types'
 import { createClient } from 'contentful'
+
+import { TypeContentfulPosts } from './Types'
 import Entry from './Entry'
 
+// contentful statics
 const CONTENTFUL_SPACE = process.env.CONTENTFUL_SPACE
 const CONTENTFUL_ACCESS_TOKEN = process.env.CONTENTFUL_ACCESS_TOKEN
-
 const contentfulClient = createClient({
   accessToken: CONTENTFUL_ACCESS_TOKEN,
   environment: 'master',
@@ -28,27 +29,25 @@ const Entries = () => {
       })
 
       if (mounted) {
-        mounted = false
         setContentfulPosts(res.items)
       }
     } catch (err) {
       throw new Error(err)
     }
+
+    mounted = false
   }
 
   useEffect(() => {
-    const fetchDataAsync = async () => {
+    const lambdaContentful = async () => {
       await fetchContentful()
     }
-    fetchDataAsync()
+    lambdaContentful()
   }, [])
 
-  let jsx = [<p key={'loading'}>Loading</p>]
-
-  if (contentfulPosts) {
-    jsx = contentfulPosts.map(post => {
-      const entry = post.fields
-
+  // render
+  const getJSX = () => {
+    const jsx = contentfulPosts.map(post => {
       const entryProps = {
         description: null,
         dateStart: null,
@@ -58,14 +57,23 @@ const Entries = () => {
       }
 
       Object.keys(entryProps).forEach(key => {
-        if (entry[key] !== undefined) {
-          entryProps[key] = entry[key]
+        if (post.fields[key] !== undefined) {
+          entryProps[key] = post.fields[key]
         }
       })
+
       return <Entry key={post.sys.id} {...entryProps} />
     })
+
+    return jsx
   }
-  return <>{jsx}</>
+
+  if (contentfulPosts) {
+    const jsxToRender = getJSX()
+    return <>{jsxToRender}</>
+  } else {
+    return <p key={'loading'}>Loading</p>
+  }
 }
 
 export default Entries
