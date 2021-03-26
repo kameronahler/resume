@@ -4,6 +4,7 @@ import { createClient } from 'contentful'
 import { TypeContentfulPosts } from './Types'
 import ExperienceEntries from './ExperienceEntries'
 import ToolsEntries from './ToolsEntries'
+import SkillsEntries from './SkillsEntries'
 
 // contentful statics
 const CONTENTFUL_SPACE = process.env.CONTENTFUL_SPACE
@@ -50,6 +51,7 @@ const App = () => {
     return (
       <div>
         <ExperienceEntries contentfulPosts={contentfulPosts} />
+        <SkillsEntries contentfulPosts={contentfulPosts} />
         <ToolsEntries contentfulPosts={contentfulPosts} />
       </div>
     )
