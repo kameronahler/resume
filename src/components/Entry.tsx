@@ -16,17 +16,19 @@ const Entry = ({
   if (dateEnd && dateStart) {
     yearRange = getYearRange(dateEnd.substring(0, 4), dateStart.substring(0, 4))
   }
-  console.log()
+
   return (
     <div>
-      <h1>{title}</h1>
-      <p>{description}</p>
-      <ul>
-        {list.map((listItem, i) => {
-          return <li key={i}>{listItem.content[0].content[0].value}</li>
-        })}
-      </ul>
-      <p>{yearRange}</p>
+      {title && <h1>{title}</h1>}
+      {description && <p>{description}</p>}
+      {list && (
+        <ul>
+          {list.map((listItem, i) => {
+            return <li key={i}>{listItem.content[0].content[0].value}</li>
+          })}
+        </ul>
+      )}
+      {yearRange && <p>{yearRange}</p>}
     </div>
   )
 }

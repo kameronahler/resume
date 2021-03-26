@@ -46,16 +46,25 @@ const Entries = () => {
   let jsx = [<p key={'loading'}>Loading</p>]
 
   if (contentfulPosts) {
-    jsx = contentfulPosts.map(post => (
-      <Entry
-        description={post.fields.description}
-        dateStart={post.fields.dateStart}
-        dateEnd={post.fields.dateEnd}
-        key={post.sys.id}
-        list={post.fields.list.content[0].content}
-        title={post.fields.title}
-      />
-    ))
+    jsx = contentfulPosts.map(post => {
+      const entry = post.fields
+
+      const entryProps = {
+        description: null,
+        dateStart: null,
+        dateEnd: null,
+        list: null,
+        title: null,
+      }
+
+      Object.keys(entryProps).forEach(key => {
+        if (entry[key] !== undefined) {
+          entryProps[key] = entry[key]
+        }
+      })
+
+      return <Entry key={post.sys.id} {...entryProps} />
+    })
   }
 
   return <>{jsx}</>
