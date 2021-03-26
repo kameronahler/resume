@@ -1,10 +1,10 @@
 import React from 'react'
 
 import { PropsEntry } from './Types'
-import EntryYear from './ExperienceEntryYear'
-import EntryList from './ExperienceEntryList'
+import EntryYear from './EntryYear'
+import EntryList from './EntryList'
 
-const ExperienceEntry = ({
+const Entry = ({
   dateEnd,
   dateStart,
   description,
@@ -23,4 +23,4 @@ const ExperienceEntry = ({
   )
 }
 
-export default ExperienceEntry
+export default Entry

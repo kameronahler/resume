@@ -2,7 +2,7 @@ import React from 'react'
 
 import { PropsEntryYear } from './Types'
 
-const ExperienceEntryYear = ({ dateEnd, dateStart }: PropsEntryYear) => {
+const EntryYear = ({ dateEnd, dateStart }: PropsEntryYear) => {
   const getYearRange = (end: string, start: string): string =>
     end === start ? `${end}` : `${end} – ${start}`
 
@@ -14,4 +14,4 @@ const ExperienceEntryYear = ({ dateEnd, dateStart }: PropsEntryYear) => {
   return <p>{yearRange}</p>
 }
 
-export default ExperienceEntryYear
+export default EntryYear

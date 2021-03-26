@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { TypeContentfulPosts, InterfaceContentfulPost } from './Types'
-import Entry from './ExperienceEntry'
+import Entry from './Entry'
 import useFilterPostsByTag from '../hooks/useFilterPostsByTag'
 
 const ExperienceEntries = ({
