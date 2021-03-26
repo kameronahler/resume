@@ -8,7 +8,6 @@ const EntryList = ({ listJSON }: PropsEntryList) => {
       {listJSON.list.map((item, i) => {
         return <li key={i}>{item}</li>
       })}
-      <li></li>
     </ul>
   )
 }
