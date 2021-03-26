@@ -53,7 +53,7 @@ const Entries = () => {
         description: null,
         dateStart: null,
         dateEnd: null,
-        list: null,
+        listJSON: null,
         title: null,
       }
 
@@ -62,11 +62,9 @@ const Entries = () => {
           entryProps[key] = entry[key]
         }
       })
-
       return <Entry key={post.sys.id} {...entryProps} />
     })
   }
-
   return <>{jsx}</>
 }
 
