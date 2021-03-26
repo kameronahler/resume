@@ -3,6 +3,7 @@ import { createClient } from 'contentful'
 
 import { TypeContentfulPosts } from './Types'
 import ExperienceEntries from './ExperienceEntries'
+import ToolsEntries from './ToolsEntries'
 
 // contentful statics
 const CONTENTFUL_SPACE = process.env.CONTENTFUL_SPACE
@@ -46,7 +47,12 @@ const App = () => {
   }, [])
 
   if (contentfulPosts) {
-    return <ExperienceEntries contentfulPosts={contentfulPosts} />
+    return (
+      <div>
+        <ExperienceEntries contentfulPosts={contentfulPosts} />
+        <ToolsEntries contentfulPosts={contentfulPosts} />
+      </div>
+    )
   } else {
     return <p key={'loading'}>Loading</p>
   }
