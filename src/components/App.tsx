@@ -3,8 +3,8 @@ import { createClient } from 'contentful'
 
 import { TypeContentfulPosts } from './Types'
 import ExperienceEntries from './ExperienceEntries'
-import ToolsEntries from './ToolsEntries'
 import SkillsEntries from './SkillsEntries'
+import ToolsEntries from './ToolsEntries'
 
 // contentful statics
 const CONTENTFUL_SPACE = process.env.CONTENTFUL_SPACE

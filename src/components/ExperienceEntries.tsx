@@ -33,11 +33,11 @@ const ExperienceEntries = ({
     return jsx
   }
 
-  if (experiencePosts) {
+  if (experiencePosts.length) {
     const jsxToRender = getJSX()
     return <>{jsxToRender}</>
   } else {
-    return <p key={'loading'}>Loading</p>
+    return <></>
   }
 }
 

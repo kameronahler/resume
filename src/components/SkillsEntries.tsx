@@ -24,11 +24,11 @@ const ToolsEntries = ({
     return jsx
   }
 
-  if (skillsPosts) {
+  if (skillsPosts.length) {
     const jsxToRender = getJSX()
     return <>{jsxToRender}</>
   } else {
-    return <p key={'loading'}>Loading</p>
+    return <></>
   }
 }
 
