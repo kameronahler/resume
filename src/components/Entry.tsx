@@ -13,7 +13,7 @@ const Entry = ({
 }: PropsEntry) => {
   return (
     <div>
-      {title && <h1>{title}</h1>}
+      {title && <h3>{title}</h3>}
       {description && <p>{description}</p>}
       {dateEnd && dateStart && (
         <EntryYear dateEnd={dateEnd} dateStart={dateStart} />

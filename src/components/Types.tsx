@@ -1,6 +1,9 @@
 // public
-export type TypeContentfulPosts = InterfaceContentfulPost[] | unknown[] | null
+export interface PropsSection {
+  heading: string
+}
 
+export type TypeContentfulPosts = InterfaceContentfulPost[] | unknown[] | null
 export interface InterfaceContentfulPost {
   fields: any
   metadata: {

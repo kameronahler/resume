@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { createClient } from 'contentful'
 
 import { TypeContentfulPosts } from './Types'
+import Header from './Header'
+import Section from './Section'
 import ExperienceEntries from './ExperienceEntries'
 import SkillsEntries from './SkillsEntries'
 import ToolsEntries from './ToolsEntries'
@@ -50,9 +52,16 @@ const App = () => {
   if (contentfulPosts) {
     return (
       <div>
-        <ExperienceEntries contentfulPosts={contentfulPosts} />
-        <SkillsEntries contentfulPosts={contentfulPosts} />
-        <ToolsEntries contentfulPosts={contentfulPosts} />
+        <Header />
+        <Section heading='Experience'>
+          <ExperienceEntries contentfulPosts={contentfulPosts} />
+        </Section>
+        <Section heading='Skills'>
+          <SkillsEntries contentfulPosts={contentfulPosts} />
+        </Section>
+        <Section heading='Tools'>
+          <ToolsEntries contentfulPosts={contentfulPosts} />
+        </Section>
       </div>
     )
   } else {
