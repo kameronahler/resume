@@ -1,10 +1,27 @@
 // public
+export type TypeContentfulPosts = InterfaceContentfulPost[] | unknown[] | null
+
+export interface InterfaceContentfulPost {
+  fields: any
+  metadata: {
+    tags: { sys: { id: string } }[]
+  }
+  sys: { id: string }
+}
+export interface PropsExperienceEntries {
+  dateEnd?: string
+  dateStart?: string
+  description?: string
+  listJSON?: { list: string[] }
+  title?: string
+}
 export interface PropsEntry {
   dateEnd?: string
   dateStart?: string
   description?: string
   listJSON?: { list: string[] }
   title?: string
+  metadata?: {}
 }
 export interface PropsEntryYear {
   dateEnd: string
@@ -16,5 +33,3 @@ export interface PropsEntryList {
     list: string[]
   }
 }
-
-export type TypeContentfulPosts = Object[] | unknown[] | null
