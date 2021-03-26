@@ -6,5 +6,9 @@ export interface EntryProps {
   list?: object[] | object
   title?: string
 }
+export interface PropsEntryYear {
+  dateEnd: string
+  dateStart: string
+}
 
 export type ContentfulPostsArr = Object[] | unknown[] | null
