@@ -1,10 +1,10 @@
 import * as React from 'react'
-import Entry from './Entry'
+import Entries from './Entries'
 
 const App = () => {
   return (
     <>
-      <Entry />
+      <Entries />
     </>
   )
 }
