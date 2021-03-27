@@ -36,6 +36,10 @@
   h3 {
     @apply text-h3;
   }
+
+  p.lead {
+    @apply text-lead;
+  }
 }
 
 @tailwind utilities;
