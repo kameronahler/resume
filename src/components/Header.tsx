@@ -7,10 +7,8 @@ const Header = () => {
         <h1>Kameron Ahler</h1>
         <p className='lead'>Product designer & developer</p>
       </div>
-      <div className='flex-shrink-0'>
-        <ul>
-          <li>kamerondesigns.com</li>
-        </ul>
+      <div className='flex flex-col flex-shrink-0 justify-end '>
+        <p>kamerondesigns.com</p>
       </div>
     </header>
   )

@@ -3,11 +3,11 @@ import { PropsSection } from './Types'
 
 const Section: React.FC<PropsSection> = ({ children, heading }) => {
   return (
-    <section>
-      <header>
+    <section className='grid grid-cols-12 mb-9'>
+      <header className='col-span-3'>
         <h2>{heading}</h2>
       </header>
-      <div>{children}</div>
+      <div className='col-span-9'>{children}</div>
     </section>
   )
 }
