@@ -28,10 +28,13 @@ module.exports = {
         },
       },
       fontSize: {
-        h1: '2.25rem',
+        h1: '2.5rem',
         h2: '1.5rem',
         h3: '1.5rem',
         lead: '1.125rem',
+      },
+      maxWidth: {
+        letter: '8.5in',
       },
     },
   },

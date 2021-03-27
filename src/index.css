@@ -9,6 +9,10 @@
     --color-text-light: #555259;
     --color-text: #252427;
   }
+  html,
+  body {
+    @apply h-full;
+  }
 
   body {
     @apply font-sans;
@@ -24,9 +28,11 @@
   h1 {
     @apply text-h1;
   }
+
   h2 {
     @apply text-h2;
   }
+
   h3 {
     @apply text-h3;
   }

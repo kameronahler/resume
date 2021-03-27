@@ -52,17 +52,19 @@ const App = () => {
 
   if (contentfulPosts) {
     return (
-      <div className='bg-purple-primary'>
-        <Header />
-        <Section heading='Experience'>
-          <ExperienceEntries contentfulPosts={contentfulPosts} />
-        </Section>
-        <Section heading='Skills'>
-          <SkillsEntries contentfulPosts={contentfulPosts} />
-        </Section>
-        <Section heading='Tools'>
-          <ToolsEntries contentfulPosts={contentfulPosts} />
-        </Section>
+      <div className='flex min-h-full'>
+        <div className='bg-bg m-auto max-w-letter p-4'>
+          <Header />
+          <Section heading='Experience'>
+            <ExperienceEntries contentfulPosts={contentfulPosts} />
+          </Section>
+          <Section heading='Skills'>
+            <SkillsEntries contentfulPosts={contentfulPosts} />
+          </Section>
+          <Section heading='Tools'>
+            <ToolsEntries contentfulPosts={contentfulPosts} />
+          </Section>
+        </div>
       </div>
     )
   } else {
