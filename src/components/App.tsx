@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { createClient } from 'contentful'
+import '@tailwindcss/postcss7-compat/tailwind.css'
 
 import { TypeContentfulPosts } from './Types'
 import Header from './Header'
@@ -51,7 +52,7 @@ const App = () => {
 
   if (contentfulPosts) {
     return (
-      <div>
+      <div className='bg-purple-primary'>
         <Header />
         <Section heading='Experience'>
           <ExperienceEntries contentfulPosts={contentfulPosts} />

@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+
+@layer base {
+  :root {
+    --color-primary-light: #ecebf5;
+    --color-primary: #4c36d3;
+    --color-bg: #f8f8f8;
+    --color-text-light: #555259;
+    --color-text: #252427;
+  }
+
+  body {
+    @apply text-text;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-bold;
+  }
+
+  h1 {
+    @apply text-h1;
+  }
+  h2 {
+    @apply text-h2;
+  }
+  h3 {
+    @apply text-h3;
+  }
+}
+
+@tailwind utilities;
