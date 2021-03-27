@@ -12,14 +12,22 @@ const Entry = ({
   title,
 }: PropsEntry) => {
   return (
-    <div>
-      {title && <h3>{title}</h3>}
-      {description && <p>{description}</p>}
-      {dateEnd && dateStart && (
-        <EntryYear dateEnd={dateEnd} dateStart={dateStart} />
+    <section className='mb-8 last:mb-0'>
+      {title && (
+        <header>
+          <h3>{title}</h3>
+        </header>
       )}
-      {listJSON && <EntryList listJSON={listJSON} />}
-    </div>
+      <div>
+        {description && <p>{description}</p>}
+        {listJSON && <EntryList listJSON={listJSON} />}
+      </div>
+      <div>
+        {dateEnd && dateStart && (
+          <EntryYear dateEnd={dateEnd} dateStart={dateStart} />
+        )}
+      </div>
+    </section>
   )
 }
 
