@@ -7,7 +7,7 @@
   h1,
   h2,
   h3 {
-    @apply font-bold;
+    @apply font-bold leading-none;
   }
 
   h1 {
@@ -15,11 +15,11 @@
   }
 
   h2 {
-    @apply text-h2;
+    @apply mb-2 text-base text-h2;
   }
 
   h3 {
-    @apply text-h3;
+    @apply mb-2 text-base letter:text-h3;
   }
 
   p.lead {
