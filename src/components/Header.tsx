@@ -7,9 +7,16 @@ const Header = () => {
         <h1>Kameron Ahler</h1>
         <p className='lead'>Product designer & developer</p>
       </div>
-      <div className='letter:flex letter:flex-col letter:flex-shrink-0 letter:justify-end '>
+      <div
+        className='mt-2
+          letter:flex
+          letter:flex-col
+          letter:flex-shrink-0
+          letter:justify-end
+          letter:mt-0'
+      >
         <a
-          className='flex items-center'
+          className='inline-flex items-center leading-none'
           href='https://kamerondesigns.com'
           target='_blank'
         >

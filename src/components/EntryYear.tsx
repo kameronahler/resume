@@ -12,10 +12,10 @@ const EntryYear = ({ dateEnd, dateStart }: PropsEntryYear) => {
         <strong>{end}</strong>
       ) : (
         <strong>
-          <span className='date'>{end}</span>
+          <span className='tracking-wider'>{end}</span>
           <span>&nbsp;–</span>
           <span className='letter:hidden'>&nbsp;</span>
-          <span className='date letter:block'>{start}</span>
+          <span className='tracking-wider letter:block'>{start}</span>
         </strong>
       )}
     </p>

@@ -50,47 +50,49 @@ const App = () => {
     lambdaContentful()
   }, [])
 
-  if (contentfulPosts) {
-    return (
-      <div className='min-h-full letter:flex'>
-        <div className='app'>
-          <svg
-            aria-hidden='true'
-            className='app__bg app__bg--top'
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 504 151'
-          >
-            <path d='M0 .502h504v97.646c0 8.376-6.46 15.335-14.813 15.956L0 150.502v-150z' />
-          </svg>
-          <Header />
-          <Section heading='Experience'>
-            <ExperienceEntries contentfulPosts={contentfulPosts} />
-          </Section>
-          <Section heading='Skills'>
-            <SkillsEntries contentfulPosts={contentfulPosts} />
-          </Section>
-          <Section heading='Tools'>
-            <ToolsEntries contentfulPosts={contentfulPosts} />
-          </Section>
-          <Section heading='Education'>
-            <EducationEntries contentfulPosts={contentfulPosts} />
-          </Section>
-          <svg
-            aria-hidden='true'
-            className='app__bg app__bg--bottom'
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 313 139'
-          >
-            <path d='M313 139H0V45.598c0-8.224 6.234-15.108 14.418-15.921L313 0v139z' />
-          </svg>
-        </div>
-      </div>
-    )
-  } else {
-    return <p key={'loading'}>Loading</p>
-  }
+  return (
+    <div className='min-h-full flex'>
+      {contentfulPosts ? (
+        <>
+          <div className='app'>
+            <svg
+              aria-hidden='true'
+              className='app__bg app__bg--top'
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 504 151'
+            >
+              <path d='M0 .502h504v97.646c0 8.376-6.46 15.335-14.813 15.956L0 150.502v-150z' />
+            </svg>
+            <Header />
+            <Section heading='Experience'>
+              <ExperienceEntries contentfulPosts={contentfulPosts} />
+            </Section>
+            <Section heading='Skills'>
+              <SkillsEntries contentfulPosts={contentfulPosts} />
+            </Section>
+            <Section heading='Tools'>
+              <ToolsEntries contentfulPosts={contentfulPosts} />
+            </Section>
+            <Section heading='Education'>
+              <EducationEntries contentfulPosts={contentfulPosts} />
+            </Section>
+            <svg
+              aria-hidden='true'
+              className='app__bg app__bg--bottom'
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 313 139'
+            >
+              <path d='M313 139H0V45.598c0-8.224 6.234-15.108 14.418-15.921L313 0v139z' />
+            </svg>
+          </div>
+        </>
+      ) : (
+        <p className='m-auto'>Loading</p>
+      )}
+    </div>
+  )
 }
 
 export default App

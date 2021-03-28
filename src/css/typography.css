@@ -1,7 +1,6 @@
 @layer base {
   body {
-    @apply font-sans;
-    @apply text-text;
+    @apply font-sans leading-relaxed text-text letter:leading-relaxed letter:text-sm;
   }
 
   h1,
@@ -23,10 +22,6 @@
   }
 
   .lead {
-    @apply text-lead;
-  }
-
-  .date {
-    @apply tracking-wider;
+    @apply leading-none mt-2 text-lead;
   }
 }

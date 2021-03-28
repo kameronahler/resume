@@ -1,6 +1,7 @@
 .app {
   @apply bg-bg
     m-auto
+    min-h-screen
     letter:w-letter
     pb-8
     pt-10
