@@ -28,7 +28,7 @@ const ExperienceEntries = ({
       })
 
       return (
-        <div className='mb-8 last:mb-0'>
+        <div className='mb-5 last:mb-0 letter:mb-9'>
           <Entry key={post.sys.id} {...entryProps} />
         </div>
       )

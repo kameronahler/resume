@@ -19,7 +19,7 @@ const ToolsEntries = ({
         entryProps.listJSON = post.fields.listJSON
       }
       return (
-        <div className='mb-8 last:mb-0 letter:mb-0'>
+        <div className='mb-5 last:mb-0 letter:mb-0'>
           <Entry key={post.sys.id} {...entryProps} />
         </div>
       )
