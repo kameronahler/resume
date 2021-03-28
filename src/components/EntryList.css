@@ -1,0 +1,14 @@
+.entry-list {
+  &__item {
+    @apply gap-x-3 grid items-start;
+
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  &__item-bullet {
+    @apply inline-block h-2 relative top-2;
+    circle {
+      stroke: var(--color-primary);
+    }
+  }
+}
