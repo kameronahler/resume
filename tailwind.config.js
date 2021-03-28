@@ -39,6 +39,9 @@ module.exports = {
       screens: {
         letter: '8.5in',
       },
+      zIndex: {
+        '-1': '-1',
+      },
     },
   },
 

@@ -1,0 +1,34 @@
+.section {
+  @apply mb-9 last:mb-0 letter:gap-x-4 letter:grid letter:grid-cols-12;
+
+  &__header {
+    @apply col-span-3;
+  }
+
+  &__heading {
+    @apply relative z-0;
+
+    &::before {
+      content: '';
+
+      @apply -left-2
+        -top-1/4
+        -z-1
+        absolute
+        bg-primary-light
+        h-3/4
+        w-full
+        letter:bg-primary
+        letter:-bottom-3
+        letter:h-0.5
+        letter:rounded-full
+        letter:left-0
+        letter:top-auto
+        letter:w-8;
+    }
+  }
+
+  &__content {
+    @apply col-span-9;
+  }
+}
