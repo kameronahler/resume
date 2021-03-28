@@ -22,7 +22,11 @@
     @apply mb-2 text-base letter:text-h3;
   }
 
-  p.lead {
+  .lead {
     @apply text-lead;
+  }
+
+  .date {
+    @apply tracking-wider;
   }
 }

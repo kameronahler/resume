@@ -1,19 +1,44 @@
 .entry {
-  @apply letter:gap-x-4 letter:grid letter:grid-cols-9;
+  --width-date: theme(width.28);
 
-  &__header {
-    @apply letter:col-span-full;
+  @apply relative;
+
+  &__heading {
+    width: calc(100% - var(--width-date));
   }
 
   &__content {
-    @apply letter:col-span-8;
-
-    &--without-date {
-      @apply letter:col-span-full;
-    }
+    @apply letter:gap-x-4 letter:grid letter:grid-cols-9;
   }
 
   &__date {
-    @apply letter:col-span-1 letter:justify-self-end;
+    width: var(--width-date);
+
+    @apply absolute
+      right-0
+      text-right
+      top-0
+      letter:col-span-1
+      letter:col-start-9
+      letter:justify-self-end
+      letter:static
+      letter:text-left
+      letter:w-auto;
+  }
+
+  &__description {
+    @apply letter:col-span-8 letter:col-start-1 letter:pr-4 letter:row-start-1;
+
+    &--without-date {
+      @apply letter:col-span-full letter:pr-0;
+    }
+  }
+
+  &__list {
+    @apply letter:col-span-8 letter:col-start-1 letter:pr-4;
+
+    &--without-date {
+      @apply letter:col-span-full letter:pr-0;
+    }
   }
 }
