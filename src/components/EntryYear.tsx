@@ -3,15 +3,22 @@ import React from 'react'
 import { PropsEntryYear } from './Types'
 
 const EntryYear = ({ dateEnd, dateStart }: PropsEntryYear) => {
-  const getYearRange = (end: string, start: string): string =>
-    end === start ? `${end}` : `${end} – ${start}`
+  const end = dateEnd.substring(0, 4)
+  const start = dateStart.substring(0, 4)
 
-  const yearRange = getYearRange(
-    dateEnd.substring(0, 4),
-    dateStart.substring(0, 4)
+  return (
+    <p>
+      {end === start ? (
+        <strong>{end}</strong>
+      ) : (
+        <strong>
+          {start}&nbsp;–
+          <br />
+          {end}
+        </strong>
+      )}
+    </p>
   )
-
-  return <p>{yearRange}</p>
 }
 
 export default EntryYear
