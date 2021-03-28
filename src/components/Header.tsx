@@ -23,9 +23,7 @@ const Header = () => {
           >
             <path
               fill='currentColor'
-              fill-rule='evenodd'
               d='M9.5.748a.75.75 0 100 1.5h3.19L.967 13.97a.75.75 0 101.06 1.06L13.75 3.31v3.189a.75.75 0 001.5 0v-5a.75.75 0 00-.75-.75h-5z'
-              clip-rule='evenodd'
             />
           </svg>
         </a>

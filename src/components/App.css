@@ -1,0 +1,34 @@
+.app {
+  @apply bg-bg
+    m-auto
+    letter:w-letter
+    pb-8
+    pt-10
+    px-8
+    relative
+    z-0;
+
+  &__bg {
+    @apply hidden
+    letter:absolute
+    letter:block
+    letter:text-primary-light
+    letter:-z-1;
+
+    path {
+      fill: currentColor;
+    }
+
+    &--top {
+      @apply letter:left-0 letter:top-0;
+      height: 150px;
+      width: auto;
+    }
+
+    &--bottom {
+      @apply letter:right-0 letter:bottom-0;
+      height: 139px;
+      width: auto;
+    }
+  }
+}

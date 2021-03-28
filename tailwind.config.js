@@ -28,7 +28,7 @@ module.exports = {
         },
       },
       fontSize: {
-        h1: '2.5rem',
+        h1: '3rem',
         h2: '1.5rem',
         h3: '1.5rem',
         lead: '1.25rem',
