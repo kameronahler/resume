@@ -8,7 +8,7 @@
   }
 
   &__content {
-    @apply letter:gap-x-4 letter:grid letter:grid-cols-9;
+    @apply gap-4 grid letter:grid-cols-9;
   }
 
   &__date {
