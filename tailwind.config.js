@@ -36,8 +36,12 @@ module.exports = {
       maxWidth: {
         letter: '8.5in',
       },
+      screens: {
+        letter: '8.5in',
+      },
     },
   },
+
   variants: {
     extend: {
       margin: ['last'],

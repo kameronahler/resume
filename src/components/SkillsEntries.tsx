@@ -26,7 +26,11 @@ const ToolsEntries = ({
 
   if (skillsPosts.length) {
     const jsxToRender = getJSX()
-    return <div className='gap-x-4 grid grid-cols-2'>{jsxToRender}</div>
+    return (
+      <div className='letter:gap-x-4 letter:grid letter:grid-cols-2'>
+        {jsxToRender}
+      </div>
+    )
   } else {
     return <></>
   }
