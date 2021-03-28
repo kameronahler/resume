@@ -26,7 +26,7 @@ const ToolsEntries = ({
 
   if (toolsPosts.length) {
     const jsxToRender = getJSX()
-    return <>{jsxToRender}</>
+    return <div className='gap-x-4 grid grid-cols-2'>{jsxToRender}</div>
   } else {
     return <></>
   }
