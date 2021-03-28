@@ -24,6 +24,7 @@ export interface PropsEntry {
   description?: string
   listJSON?: { list: string[] }
   title?: string
+  titleDesktopHidden?: boolean
   metadata?: {}
 }
 export interface PropsEntryYear {

@@ -6,13 +6,17 @@ import Entry from '../Components/Entry'
 const useGetListJSX = ({
   posts,
   heading,
+  headingDesktopHidden,
 }: {
   posts: object[] | unknown[]
   heading: string
+  headingDesktopHidden?: boolean
 }) =>
   posts.map((post: InterfaceContentfulPost) => {
     const entryProps = {
       listJSON: null,
+      title: heading,
+      titleDesktopHidden: headingDesktopHidden,
     }
 
     if (post.fields.listJSON !== undefined) {
@@ -20,7 +24,6 @@ const useGetListJSX = ({
 
       return (
         <div key={post.sys.id} className='mb-5 last:mb-0 letter:mb-0'>
-          <h3 className='letter:hidden'>{heading}</h3>
           <Entry {...entryProps} />
         </div>
       )

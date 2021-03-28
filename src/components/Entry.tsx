@@ -10,6 +10,7 @@ const Entry = ({
   description,
   listJSON,
   title,
+  titleDesktopHidden,
 }: PropsEntry) => {
   const hasDate = dateEnd && dateStart
 
@@ -17,7 +18,13 @@ const Entry = ({
     <section className='entry'>
       {title && (
         <header>
-          <h3 className='entry__heading'>{title}</h3>
+          <h3
+            className={`entry__heading ${
+              titleDesktopHidden ? 'entry__heading--desktop-hidden' : ''
+            }`}
+          >
+            {title}
+          </h3>
         </header>
       )}
       <div className='entry__content'>

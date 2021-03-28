@@ -5,6 +5,10 @@
 
   &__heading {
     width: calc(100% - var(--width-date));
+
+    &--desktop-hidden {
+      @apply letter:sr-only;
+    }
   }
 
   &__content {

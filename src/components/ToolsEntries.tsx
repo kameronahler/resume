@@ -12,10 +12,12 @@ const ToolsEntries = ({
   const designJSX = useGetListJSX({
     posts: useFilterPostsByTag(contentfulPosts, 'toolsDesign'),
     heading: 'Design',
+    headingDesktopHidden: true,
   })
   const devJSX = useGetListJSX({
     posts: useFilterPostsByTag(contentfulPosts, 'toolsDev'),
     heading: 'Dev',
+    headingDesktopHidden: true,
   })
 
   return (
