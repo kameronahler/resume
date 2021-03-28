@@ -52,7 +52,7 @@ const App = () => {
   if (contentfulPosts) {
     return (
       <div className='min-h-full letter:flex'>
-        <div className='bg-bg m-auto max-w-letter pb-8 pt-10 px-8'>
+        <div className='bg-bg m-auto letter:w-letter pb-8 pt-10 px-8'>
           <Header />
           <Section heading='Experience'>
             <ExperienceEntries contentfulPosts={contentfulPosts} />

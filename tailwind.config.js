@@ -33,7 +33,7 @@ module.exports = {
         h3: '1.5rem',
         lead: '1.25rem',
       },
-      maxWidth: {
+      width: {
         letter: '8.5in',
       },
       screens: {
