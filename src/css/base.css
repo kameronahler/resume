@@ -5,4 +5,8 @@
   body {
     @apply h-full;
   }
+
+  a {
+    @apply text-primary hover:underline;
+  }
 }

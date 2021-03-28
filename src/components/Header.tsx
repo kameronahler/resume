@@ -8,7 +8,27 @@ const Header = () => {
         <p className='lead'>Product designer & developer</p>
       </div>
       <div className='letter:flex letter:flex-col letter:flex-shrink-0 letter:justify-end '>
-        <p>kamerondesigns.com</p>
+        <a
+          className='flex items-center'
+          href='https://kamerondesigns.com'
+          target='_blank'
+        >
+          <span>kamerondesigns.com</span>
+          <svg
+            aria-hidden='true'
+            className='h-3 inline-block ml-1 w-3'
+            fill='none'
+            viewBox='0 0 16 16'
+            xmlns='http://www.w3.org/2000/svg'
+          >
+            <path
+              fill='currentColor'
+              fill-rule='evenodd'
+              d='M9.5.748a.75.75 0 100 1.5h3.19L.967 13.97a.75.75 0 101.06 1.06L13.75 3.31v3.189a.75.75 0 001.5 0v-5a.75.75 0 00-.75-.75h-5z'
+              clip-rule='evenodd'
+            />
+          </svg>
+        </a>
       </div>
     </header>
   )
