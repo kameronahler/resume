@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { createClient } from 'contentful'
 
 import { TypeContentfulPosts } from './Types'
-import EducationEntries from './ToolsEntries'
+import EducationEntries from './EducationEntries'
 import ExperienceEntries from './ExperienceEntries'
 import Header from './Header'
 import Section from './Section'
-import ExperienceEntries from './ExperienceEntries'
 import SkillsEntries from './SkillsEntries'
 import ToolsEntries from './ToolsEntries'
 
