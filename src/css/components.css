@@ -1,1 +1,4 @@
 @tailwind components;
+
+/* components */
+@import '../components/Entry.css';

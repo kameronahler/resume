@@ -12,21 +12,21 @@ const Entry = ({
   title,
 }: PropsEntry) => {
   return (
-    <section className='last:mb-0 letter:gap-x-4 letter:grid letter:grid-cols-9 letter:mb-8'>
+    <section className='entry'>
       {title && (
-        <header className='letter:col-span-full'>
+        <header className='entry__header'>
           <h3>{title}</h3>
         </header>
       )}
       <div
-        className={
-          dateEnd && dateStart ? 'letter:col-span-8' : 'letter:col-span-full'
-        }
+        className={`entry__content ${
+          dateEnd && dateStart ? '' : 'entry__content--without-date'
+        }`}
       >
         {description && <p>{description}</p>}
         {listJSON && <EntryList listJSON={listJSON} />}
       </div>
-      <div className='letter:col-span-1 letter:justify-self-end'>
+      <div className='entry__date'>
         {dateEnd && dateStart && (
           <EntryYear dateEnd={dateEnd} dateStart={dateStart} />
         )}
