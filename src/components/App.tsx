@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { createClient } from 'contentful'
-import '@tailwindcss/postcss7-compat/tailwind.css'
 
 import { TypeContentfulPosts } from './Types'
 import Header from './Header'
