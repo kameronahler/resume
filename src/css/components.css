@@ -1,9 +1,9 @@
 @tailwind components;
 
 /* components */
-@import '../components/App.css';
-@import '../components/AppHeader.css';
-@import '../components/DarkModeButton.css';
-@import '../components/Entry.css';
-@import '../components/EntryList.css';
-@import '../components/Section.css';
+@import './components/App.css';
+@import './components/AppHeader.css';
+@import './components/AppSection.css';
+@import './components/DarkMode.css';
+@import './components/Entry.css';
+@import './components/EntryList.css';

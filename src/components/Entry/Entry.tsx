@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { PropsEntry } from './Types'
+import { PropsEntry } from '../../store/Types'
 import EntryYear from './EntryYear'
 import EntryList from './EntryList'
 

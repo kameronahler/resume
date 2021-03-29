@@ -1,7 +1,7 @@
 import React from 'react'
-import { PropsSection } from './Types'
+import { PropsAppSection } from '../../store/Types'
 
-const Section: React.FC<PropsSection> = ({ children, heading }) => {
+const AppSection: React.FC<PropsAppSection> = ({ children, heading }) => {
   return (
     <section className='section'>
       <header className='section__header'>
@@ -14,4 +14,4 @@ const Section: React.FC<PropsSection> = ({ children, heading }) => {
   )
 }
 
-export default Section
+export default AppSection

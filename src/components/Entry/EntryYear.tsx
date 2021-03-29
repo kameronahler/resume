@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { PropsEntryYear } from './Types'
+import { PropsEntryYear } from '../../store/Types'
 
 const EntryYear = ({ dateEnd, dateStart }: PropsEntryYear) => {
   const end = dateEnd.substring(0, 4)

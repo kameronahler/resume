@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { TypeContentfulPosts, InterfaceContentfulPost } from './Types'
-import useFilterPostsByTag from '../hooks/useFilterPostsByTag'
-import Entry from './Entry'
+import { TypeContentfulPosts, InterfaceContentfulPost } from '../../store/Types'
+import useFilterPostsByTag from '../../hooks/useFilterPostsByTag'
+import Entry from '../Entry/Entry'
 
-const EducationEntries = ({
+const EntriesEducation = ({
   contentfulPosts,
 }: {
   contentfulPosts: TypeContentfulPosts
@@ -40,4 +40,4 @@ const EducationEntries = ({
   }
 }
 
-export default EducationEntries
+export default EntriesEducation

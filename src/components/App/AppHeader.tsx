@@ -1,5 +1,5 @@
 import React from 'react'
-import DarkModeButton from './DarkModeButton'
+import DarkModeButton from '../DarkMode/DarkMode'
 
 const AppHeader = () => {
   return (

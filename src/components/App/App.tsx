@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { createClient } from 'contentful'
 
-import { TypeContentfulPosts } from './Types'
-import EducationEntries from './EducationEntries'
-import ExperienceEntries from './ExperienceEntries'
-import Header from './AppHeader'
-import Section from './Section'
-import SkillsEntries from './SkillsEntries'
-import ToolsEntries from './ToolsEntries'
+import { TypeContentfulPosts } from '../../store/Types'
+import EntriesEducation from '../Entries/EntriesEducation'
+import EntriesExperience from '../Entries/EntriesExperience'
+import EntriesSkills from '../Entries//EntriesSkills'
+import EntriesTools from '../Entries//EntriesTools'
+import AppHeader from './AppHeader'
+import AppSection from './AppSection'
 
 // contentful statics
 const CONTENTFUL_SPACE = process.env.CONTENTFUL_SPACE
@@ -64,19 +64,19 @@ const App = () => {
             >
               <path d='M0 .502h504v97.646c0 8.376-6.46 15.335-14.813 15.956L0 150.502v-150z' />
             </svg>
-            <Header />
-            <Section heading='Experience'>
-              <ExperienceEntries contentfulPosts={contentfulPosts} />
-            </Section>
-            <Section heading='Skills'>
-              <SkillsEntries contentfulPosts={contentfulPosts} />
-            </Section>
-            <Section heading='Tools'>
-              <ToolsEntries contentfulPosts={contentfulPosts} />
-            </Section>
-            <Section heading='Education'>
-              <EducationEntries contentfulPosts={contentfulPosts} />
-            </Section>
+            <AppHeader />
+            <AppSection heading='Experience'>
+              <EntriesExperience contentfulPosts={contentfulPosts} />
+            </AppSection>
+            <AppSection heading='Skills'>
+              <EntriesSkills contentfulPosts={contentfulPosts} />
+            </AppSection>
+            <AppSection heading='Tools'>
+              <EntriesTools contentfulPosts={contentfulPosts} />
+            </AppSection>
+            <AppSection heading='Education'>
+              <EntriesEducation contentfulPosts={contentfulPosts} />
+            </AppSection>
             <svg
               aria-hidden='true'
               className='app__bg app__bg--bottom'

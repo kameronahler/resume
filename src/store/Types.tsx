@@ -1,9 +1,10 @@
 // public
-export interface PropsSection {
+export interface PropsAppSection {
   heading: string
 }
 
 export type TypeContentfulPosts = InterfaceContentfulPost[] | unknown[] | null
+
 export interface InterfaceContentfulPost {
   fields: any
   metadata: {
@@ -11,7 +12,7 @@ export interface InterfaceContentfulPost {
   }
   sys: { id: string }
 }
-export interface PropsExperienceEntries {
+export interface PropsEntriesExperience {
   dateEnd?: string
   dateStart?: string
   description?: string

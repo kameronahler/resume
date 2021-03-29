@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { PropsEntryList } from './Types'
+import { PropsEntryList } from '../../store/Types'
 
 const EntryList = ({ listJSON }: PropsEntryList) => {
   return (

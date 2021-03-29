@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { TypeContentfulPosts, InterfaceContentfulPost } from './Types'
-import Entry from './Entry'
-import useFilterPostsByTag from '../hooks/useFilterPostsByTag'
+import { TypeContentfulPosts, InterfaceContentfulPost } from '../../store/Types'
+import Entry from '../Entry/Entry'
+import useFilterPostsByTag from '../../hooks/useFilterPostsByTag'
 
-const ExperienceEntries = ({
+const EntriesExperience = ({
   contentfulPosts,
 }: {
   contentfulPosts: TypeContentfulPosts
@@ -45,4 +45,4 @@ const ExperienceEntries = ({
   }
 }
 
-export default ExperienceEntries
+export default EntriesExperience

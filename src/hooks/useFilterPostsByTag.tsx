@@ -1,4 +1,4 @@
-import { TypeContentfulPosts } from '../components/Types'
+import { TypeContentfulPosts } from '../store/Types'
 
 const useFilterPostsByTag = (posts: TypeContentfulPosts, targetTag: string) => {
   const filteredDown = posts.filter(post => {

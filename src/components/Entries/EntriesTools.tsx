@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { TypeContentfulPosts } from './Types'
-import useFilterPostsByTag from '../hooks/useFilterPostsByTag'
-import useGetListJSX from '../hooks/useGetListJSX'
+import { TypeContentfulPosts } from '../../store/Types'
+import useFilterPostsByTag from '../../hooks/useFilterPostsByTag'
+import useGetListJSX from '../../hooks/useGetListJSX'
 
-const ToolsEntries = ({
+const EntriesTools = ({
   contentfulPosts,
 }: {
   contentfulPosts: TypeContentfulPosts
@@ -28,4 +28,4 @@ const ToolsEntries = ({
   )
 }
 
-export default ToolsEntries
+export default EntriesTools
