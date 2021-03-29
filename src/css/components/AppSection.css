@@ -1,5 +1,5 @@
 .section {
-  @apply mb-9 last:mb-0 letter:gap-x-4 letter:grid letter:grid-cols-12;
+  @apply mb-10 last:mb-0 letter:gap-x-4 letter:grid letter:grid-cols-12;
 
   &__header {
     @apply mb-4 letter:col-span-3 letter:mb-0;
