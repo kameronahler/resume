@@ -6,7 +6,6 @@
   @apply absolute
     bg-primary-light
     flex
-    focus:outline-none
     items-center
     p-1
     right-0

@@ -36,7 +36,7 @@ const DarkModeButton = () => {
                   strokeLinecap='round'
                   strokeLinejoin='round'
                   d='M8.179 7.973v0A5.973 5.973 0 004 2.276h0A5.971 5.971 0 114 13.67h0a5.973 5.973 0 004.179-5.697h0z'
-                  clip-rule='evenodd'
+                  clipRule='evenodd'
                 />
               </svg>
             ) : (
