@@ -39,10 +39,38 @@
   }
 
   &__button {
-    @apply hover:text-primary;
+    @apply duration-200 ease-in-out;
+
+    transition-property: transform;
 
     &--expanded {
       @apply focus:outline-none relative text-primary z-30;
+    }
+
+    &:hover,
+    &:focus,
+    &--expanded {
+      @apply translate-x-1 text-primary transform;
+    }
+
+    &::before {
+      @apply -left-2
+        -top-1/4
+        -z-1
+        absolute
+        bg-section-accent
+        duration-300
+        ease-in-out
+        h-2/3
+        opacity-0
+        w-20;
+
+      content: '';
+      transition-property: opacity;
+
+      .app:hover & {
+        @apply opacity-100;
+      }
     }
   }
 

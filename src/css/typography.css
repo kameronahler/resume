@@ -22,6 +22,6 @@
   }
 
   .lead {
-    @apply leading-none mt-2 text-lead;
+    @apply leading-none text-lead;
   }
 }

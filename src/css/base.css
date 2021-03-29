@@ -4,13 +4,27 @@
   html {
     @apply h-full;
   }
+
   body {
     @apply min-h-full;
   }
+
   body {
     @apply bg-body p-4 letter:px-8 letter:pt-8 letter:pb-20;
   }
+
   a {
     @apply text-primary hover:underline;
+  }
+
+  a,
+  button {
+    &:focus {
+      outline: none;
+    }
+    &:focus-visible {
+      outline: 1px dashed var(--color-text);
+      outline-offset: 0.5rem;
+    }
   }
 }

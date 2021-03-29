@@ -10,7 +10,7 @@ const AppHeader = () => {
       <DarkModeButton />
       <div className='app-header__intro'>
         <h1 className='app-header__h1'>Kameron Ahler</h1>
-        <div className='relative'>
+        <div className='relative mt-2'>
           <PopoverButton ref={targettedRef}>
             <p className='lead'>Product designer & developer</p>
           </PopoverButton>
