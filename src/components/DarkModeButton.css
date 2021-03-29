@@ -1,33 +1,49 @@
 .darkmode-button {
-  --height: calc(1em * theme(lineHeight.relaxed));
-  --width: theme(width.12);
+  --heightButton: 1.75rem;
+  --switchSize: calc((var(--heightButton) - 0.25rem));
+  --widthButton: 3.25rem;
 
   @apply absolute
     bg-primary-light
     flex
     focus:outline-none
     items-center
+    p-1
     right-0
     rounded-full
     top-1.5
-    w-12
     z-0;
 
-  height: var(--height);
+  height: var(--heightButton);
+  width: var(--widthButton);
 
   &__sr-text {
     @apply sr-only;
   }
 
   &__switch-handle {
-    @apply bg-primary inline-block rounded-full;
+    @apply bg-primary duration-200 ease-in-out inline-flex rounded-full;
 
-    height: var(--height);
-    transition: all 0.25s ease-out;
-    width: var(--height);
+    height: var(--switchSize);
+    transition-property: transform;
+    width: var(--switchSize);
 
     &--enabled {
-      transform: translateX(calc(var(--width) - var(--height)));
+      transform: translateX(
+        calc(var(--widthButton) - var(--switchSize) - 0.5rem)
+      );
+    }
+  }
+
+  &__svg {
+    @apply h-4 m-auto w-4;
+
+    &--light {
+      @apply text-white;
+    }
+
+    &--dark {
+      @apply left-px relative text-white;
     }
   }
 }
