@@ -1,13 +1,32 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import DarkModeButton from '../DarkMode/DarkMode'
+import PopoverButton from '../Popover/PopoverButton'
 
 const AppHeader = () => {
+  const targettedRef = useRef(null)
+
   return (
     <header className='app-header'>
       <DarkModeButton />
       <div className='app-header__intro'>
         <h1 className='app-header__h1'>Kameron Ahler</h1>
-        <p className='lead'>Product designer & developer</p>
+        <div className='relative'>
+          <PopoverButton ref={targettedRef}>
+            <p className='lead'>Product designer & developer</p>
+          </PopoverButton>
+          <div
+            aria-expanded='false'
+            ref={targettedRef}
+            className='hidden absolute bg-white p-4 left-0 mt-4 z-10'
+          >
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quo
+              maxime suscipit dolor assumenda quod reprehenderit sequi adipisci,
+              blanditiis libero. Itaque fuga, beatae nobis dolorem omnis odit
+              blanditiis dignissimos dolore.
+            </p>
+          </div>
+        </div>
       </div>
       <div className='app-header__external-link-wrapper'>
         <a
