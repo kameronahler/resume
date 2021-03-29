@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-
+import ReactMarkdown from 'react-markdown'
 import { PropsEntry } from '../../store/Types'
 import EntryYear from './EntryYear'
 import EntryList from './EntryList'
@@ -16,7 +16,7 @@ const Entry = ({
 }: PropsEntry) => {
   const hasDate = dateEnd && dateStart
   const targettedRef = useRef(null)
-
+  console.log(popoverText)
   return (
     <section className='entry'>
       {title && (
@@ -37,7 +37,7 @@ const Entry = ({
                 ref={targettedRef}
                 className='popover__content popover__content--collapsed'
               >
-                <p>{popoverText}</p>
+                <ReactMarkdown source={`${popoverText}`} />
               </div>
             </>
           ) : (

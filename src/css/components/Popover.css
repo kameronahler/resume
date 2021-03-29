@@ -25,6 +25,17 @@
       @apply invisible opacity-0;
       transform: translateY(-2rem);
     }
+
+    h1,
+    h2,
+    h3 {
+      @apply mb-2;
+    }
+
+    p,
+    ul {
+      @apply mb-4 last:mb-0;
+    }
   }
 
   &__button {
