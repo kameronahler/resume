@@ -1,13 +1,13 @@
 .popover {
   &__overlay {
-    @apply bg-overlay fixed h-screen left-0 top-0 w-screen z-20;
+    @apply bg-popover-overlay fixed h-screen left-0 top-0 w-screen z-20;
 
     opacity: 0.95;
   }
 
   &__content {
     @apply absolute
-      bg-overlay
+      bg-popover-bg
       duration-200
       ease-in-out
       left-0

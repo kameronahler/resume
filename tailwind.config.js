@@ -26,8 +26,14 @@ module.exports = {
         body: {
           DEFAULT: 'var(--color-body)',
         },
-        overlay: {
-          DEFAULT: 'var(--color-overlay)',
+        'popover-overlay': {
+          DEFAULT: 'var(--color-popover-overlay)',
+        },
+        'popover-bg': {
+          DEFAULT: 'var(--color-popover-bg)',
+        },
+        'section-accent': {
+          DEFAULT: 'var(--color-section-accent)',
         },
         text: {
           DEFAULT: 'var(--color-text)',
