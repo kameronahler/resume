@@ -1,31 +1,24 @@
 import React from 'react'
 import DarkModeButton from './DarkModeButton'
 
-const Header = () => {
+const AppHeader = () => {
   return (
-    <header className='mb-8 relative letter:flex letter:mb-14'>
+    <header className='app-header'>
       <DarkModeButton />
-      <div className='letter:flex-grow'>
-        <h1 className='pr-16'>Kameron Ahler</h1>
+      <div className='app-header__intro'>
+        <h1 className='app-header__h1'>Kameron Ahler</h1>
         <p className='lead'>Product designer & developer</p>
       </div>
-      <div
-        className='mt-2
-        letter:flex
-        letter:flex-col
-        letter:flex-shrink-0
-        letter:justify-end
-        letter:mt-0'
-      >
+      <div className='app-header__external-link-wrapper'>
         <a
-          className='inline-flex items-center leading-none'
+          className='app-header__external-link'
           href='https://kamerondesigns.com'
           target='_blank'
         >
           <span>kamerondesigns.com</span>
           <svg
             aria-hidden='true'
-            className='h-3 inline-block ml-1 w-3'
+            className='app-header__external-link-svg'
             fill='none'
             viewBox='0 0 16 16'
             xmlns='http://www.w3.org/2000/svg'
@@ -41,4 +34,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default AppHeader

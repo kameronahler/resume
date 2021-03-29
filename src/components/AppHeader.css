@@ -1,0 +1,33 @@
+.app-header {
+  @apply mb-8 relative letter:flex letter:mb-14;
+
+  &__intro {
+    @apply letter:flex-grow;
+  }
+
+  &__h1 {
+    @apply pr-16;
+  }
+
+  &__external-link-wrapper {
+    @apply mt-2
+      letter:flex
+      letter:flex-col
+      letter:flex-shrink-0
+      letter:justify-end
+      letter:mt-0;
+  }
+
+  &__external-link {
+    @apply inline-flex items-center leading-none;
+  }
+
+  &__external-link-svg {
+    @apply w-3 ml-1 inline-block h-3 ease-in-out duration-200;
+
+    .app-header__external-link:hover & {
+      transform: translate(0.125rem, -0.125rem);
+      transition-properties: transform;
+    }
+  }
+}
