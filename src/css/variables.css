@@ -1,7 +1,17 @@
 :root {
+  --color-bg: #f8f8f8;
+  --color-bg-accent: #ecebf5;
+  --color-body: #fafafa;
   --color-primary-light: #ecebf5;
   --color-primary: #4c36d3;
-  --color-bg: #f8f8f8;
-  --color-text-light: #555259;
   --color-text: #252427;
+}
+
+body.dark-mode {
+  --color-bg: #020202;
+  --color-bg-accent: #110e13;
+  --color-body: #0e0e0f;
+  --color-primary-light: #ecebf5;
+  --color-primary: #7159ff;
+  --color-text: #c0bbc7;
 }

@@ -1,19 +1,21 @@
 import React from 'react'
+import DarkModeButton from './DarkModeButton'
 
 const Header = () => {
   return (
-    <header className='mb-8 letter:flex letter:mb-14'>
-      <div className='letter:flex-grow letter:flex-shrink'>
-        <h1>Kameron Ahler</h1>
+    <header className='mb-8 relative letter:flex letter:mb-14'>
+      <DarkModeButton />
+      <div className='letter:flex-grow'>
+        <h1 className='pr-16'>Kameron Ahler</h1>
         <p className='lead'>Product designer & developer</p>
       </div>
       <div
         className='mt-2
-          letter:flex
-          letter:flex-col
-          letter:flex-shrink-0
-          letter:justify-end
-          letter:mt-0'
+        letter:flex
+        letter:flex-col
+        letter:flex-shrink-0
+        letter:justify-end
+        letter:mt-0'
       >
         <a
           className='inline-flex items-center leading-none'

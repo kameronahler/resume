@@ -1,0 +1,33 @@
+.darkmode-button {
+  --height: calc(1em * theme(lineHeight.relaxed));
+  --width: theme(width.12);
+
+  @apply absolute
+    bg-primary-light
+    flex
+    focus:outline-none
+    items-center
+    right-0
+    rounded-full
+    top-1.5
+    w-12
+    z-0;
+
+  height: var(--height);
+
+  &__sr-text {
+    @apply sr-only;
+  }
+
+  &__switch-handle {
+    @apply bg-primary inline-block rounded-full;
+
+    height: var(--height);
+    transition: all 0.25s ease-out;
+    width: var(--height);
+
+    &--enabled {
+      transform: translateX(calc(var(--width) - var(--height)));
+    }
+  }
+}

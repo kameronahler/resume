@@ -13,7 +13,7 @@
     @apply hidden
     letter:absolute
     letter:block
-    letter:text-primary-light
+    letter:text-bg-accent
     letter:-z-1;
 
     path {

@@ -2,6 +2,7 @@
 
 /* components */
 @import '../components/App.css';
+@import '../components/DarkModeButton.css';
 @import '../components/Entry.css';
 @import '../components/EntryList.css';
 @import '../components/Section.css';

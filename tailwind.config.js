@@ -21,10 +21,13 @@ module.exports = {
         },
         bg: {
           DEFAULT: 'var(--color-bg)',
+          accent: 'var(--color-bg-accent)',
+        },
+        body: {
+          DEFAULT: 'var(--color-body)',
         },
         text: {
           DEFAULT: 'var(--color-text)',
-          light: 'var(--color-text-light)',
         },
       },
       fontSize: {
