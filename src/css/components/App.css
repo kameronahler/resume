@@ -22,14 +22,14 @@
 
     &--top {
       @apply letter:left-0 letter:top-0;
-      height: 150px;
-      width: auto;
+      height: auto;
+      width: 5.253in;
     }
 
     &--bottom {
       @apply letter:right-0 letter:bottom-0;
-      height: 139px;
-      width: auto;
+      height: auto;
+      width: 3.247in;
     }
   }
 }

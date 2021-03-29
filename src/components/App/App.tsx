@@ -62,7 +62,7 @@ const App = () => {
               fill='none'
               viewBox='0 0 504 151'
             >
-              <path d='M0 .502h504v97.646c0 8.376-6.46 15.335-14.813 15.956L0 150.502v-150z' />
+              <path d='M0 .502h504v113.651c0 8.577-6.764 15.629-15.334 15.986L0 150.502v-150z' />
             </svg>
             <AppHeader />
             <AppSection heading='Experience'>
@@ -82,9 +82,9 @@ const App = () => {
               className='app__bg app__bg--bottom'
               xmlns='http://www.w3.org/2000/svg'
               fill='none'
-              viewBox='0 0 313 139'
+              viewBox='0 0 313 123'
             >
-              <path d='M313 139H0V45.598c0-8.224 6.234-15.108 14.418-15.921L313 0v139z' />
+              <path d='M313 122.395l-313-.001v-92.59c0-8.558 6.735-15.601 15.285-15.984L313 .502v121.893z' />
             </svg>
           </div>
         </>
