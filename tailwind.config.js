@@ -22,10 +22,12 @@ module.exports = {
         bg: {
           DEFAULT: 'var(--color-bg)',
           accent: 'var(--color-bg-accent)',
-          overlay: 'var(--color-bg-overlay)',
         },
         body: {
           DEFAULT: 'var(--color-body)',
+        },
+        overlay: {
+          DEFAULT: 'var(--color-overlay)',
         },
         text: {
           DEFAULT: 'var(--color-text)',

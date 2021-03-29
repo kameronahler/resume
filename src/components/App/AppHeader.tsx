@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import DarkModeButton from '../DarkMode/DarkMode'
-import PopoverButton from '../Popover/PopoverButton'
+import PopoverButton from '../Popover/PopoverOpen'
 
 const AppHeader = () => {
   const targettedRef = useRef(null)
@@ -19,12 +19,7 @@ const AppHeader = () => {
             ref={targettedRef}
             className='popover__content popover__content--collapsed'
           >
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quo
-              maxime suscipit dolor assumenda quod reprehenderit sequi adipisci,
-              blanditiis libero. Itaque fuga, beatae nobis dolorem omnis odit
-              blanditiis dignissimos dolore.
-            </p>
+            <p>A fun-sized unicorn, but like for code and design and stuff.</p>
           </div>
         </div>
       </div>

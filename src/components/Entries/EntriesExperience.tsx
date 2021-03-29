@@ -15,9 +15,10 @@ const EntriesExperience = ({
     const jsx = experiencePosts.map((post: InterfaceContentfulPost) => {
       const entryProps = {
         description: null,
-        dateStart: null,
         dateEnd: null,
+        dateStart: null,
         listJSON: null,
+        popoverText: null,
         title: null,
       }
 

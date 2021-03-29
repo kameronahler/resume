@@ -1,30 +1,54 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 import { PropsEntry } from '../../store/Types'
 import EntryYear from './EntryYear'
 import EntryList from './EntryList'
+import PopoverButton from '../Popover/PopoverOpen'
 
 const Entry = ({
   dateEnd,
   dateStart,
   description,
   listJSON,
+  popoverText,
   title,
   titleDesktopHidden,
 }: PropsEntry) => {
   const hasDate = dateEnd && dateStart
+  const targettedRef = useRef(null)
 
   return (
     <section className='entry'>
       {title && (
-        <header>
-          <h3
-            className={`entry__heading ${
-              titleDesktopHidden ? 'entry__heading--desktop-hidden' : ''
-            }`}
-          >
-            {title}
-          </h3>
+        <header className='relative'>
+          {popoverText ? (
+            <>
+              <PopoverButton ref={targettedRef}>
+                <h3
+                  className={`entry__heading ${
+                    titleDesktopHidden ? 'entry__heading--desktop-hidden' : ''
+                  }`}
+                >
+                  {title}
+                </h3>
+              </PopoverButton>
+              <div
+                aria-expanded='false'
+                ref={targettedRef}
+                className='popover__content popover__content--collapsed'
+              >
+                <p>{popoverText}</p>
+              </div>
+            </>
+          ) : (
+            <h3
+              className={`entry__heading ${
+                titleDesktopHidden ? 'entry__heading--desktop-hidden' : ''
+              }`}
+            >
+              {title}
+            </h3>
+          )}
         </header>
       )}
       <div className='entry__content'>

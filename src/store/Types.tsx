@@ -24,9 +24,10 @@ export interface PropsEntry {
   dateStart?: string
   description?: string
   listJSON?: { list: string[] }
+  metadata?: object
+  popoverText?: string
   title?: string
   titleDesktopHidden?: boolean
-  metadata?: {}
 }
 export interface PropsEntryYear {
   dateEnd: string

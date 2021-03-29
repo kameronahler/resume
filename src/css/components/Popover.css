@@ -1,11 +1,13 @@
 .popover {
   &__overlay {
-    @apply bg-bg-overlay fixed h-screen left-0 opacity-90 top-0 w-screen z-20;
+    @apply bg-overlay fixed h-screen left-0 top-0 w-screen z-20;
+
+    opacity: 0.95;
   }
 
   &__content {
     @apply absolute
-      bg-bg-overlay
+      bg-overlay
       duration-200
       ease-in-out
       left-0
@@ -34,13 +36,19 @@
   }
 
   &__button-close {
-    @apply absolute -right-8 bottom-0;
+    @apply bg-primary
+      fixed
+      flex
+      leading-none
+      p-4
+      right-8
+      rounded-full
+      text-white
+      top-8;
   }
 
   &__button-close-svg {
-    @apply h-4 inline-block relative w-4;
-
-    top: 0.125rem;
+    @apply flex h-4 items-center justify-center w-4;
   }
 
   &__overlay {
