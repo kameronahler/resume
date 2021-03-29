@@ -54,7 +54,7 @@ const App = () => {
     <div className='min-h-full flex'>
       {contentfulPosts ? (
         <>
-          <div className='app'>
+          <div id='app' className='app'>
             <svg
               aria-hidden='true'
               className='app__bg app__bg--top'

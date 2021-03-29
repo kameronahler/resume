@@ -1,30 +1,27 @@
-import React, { useState, useEffect, forwardRef } from 'react'
+import React, { useState, forwardRef } from 'react'
+import PopoverOverlay from './PopoverOverlay'
 
 const PopoverButton = forwardRef((props, ref) => {
   const [expanded, setExpanded] = useState(false)
 
-  const clickHandler = () => {
-    if (ref.current.getAttribute('aria-expanded') === 'false') {
-      ref.current.classList.remove('hidden')
-      ref.current.setAttribute('aria-expanded', 'true')
-      setExpanded(true)
-    } else {
-      ref.current.classList.add('hidden')
-      ref.current.setAttribute('aria-expanded', 'false')
-      setExpanded(false)
-    }
+  const handleOpen = () => {
+    ref.current.setAttribute('aria-expanded', 'true')
+    ref.current.classList.remove('hidden')
+    setExpanded(true)
   }
 
-  useEffect(() => {
-    if (expanded) {
-      document.body.classList.add('opacity-50')
-    } else {
-      document.body.classList.remove('opacity-50')
-    }
-    return
-  })
+  const handleClose = () => {
+    ref.current.setAttribute('aria-expanded', 'false')
+    ref.current.classList.add('hidden')
+    setExpanded(false)
+  }
 
-  return <button onClick={clickHandler}>{props.children}</button>
+  return (
+    <>
+      <button onClick={handleOpen}>{props.children}</button>
+      <PopoverOverlay expanded={expanded} onClose={handleClose} />
+    </>
+  )
 })
 
 export default PopoverButton
