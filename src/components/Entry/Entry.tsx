@@ -16,7 +16,7 @@ const Entry = ({
 }: PropsEntry) => {
   const hasDate = dateEnd && dateStart
   const targettedRef = useRef(null)
-  console.log(popoverText)
+
   return (
     <section className='entry'>
       {title && (

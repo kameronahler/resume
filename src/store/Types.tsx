@@ -16,6 +16,8 @@ export interface PropsEntriesExperience {
   dateEnd?: string
   dateStart?: string
   description?: string
+  order?: number
+  popoverText?: string
   listJSON?: { list: string[] }
   title?: string
 }
@@ -25,6 +27,7 @@ export interface PropsEntry {
   description?: string
   listJSON?: { list: string[] }
   metadata?: object
+  order?: number
   popoverText?: string
   title?: string
   titleDesktopHidden?: boolean

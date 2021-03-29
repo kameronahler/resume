@@ -12,12 +12,16 @@ const EntriesExperience = ({
   const experiencePosts = useFilterPostsByTag(contentfulPosts, 'experience')
 
   const getJSX = () => {
+    // sort
+    experiencePosts.sort((a, b) => (a.fields.order > b.fields.order ? 1 : -1))
+
     const jsx = experiencePosts.map((post: InterfaceContentfulPost) => {
       const entryProps = {
         description: null,
         dateEnd: null,
         dateStart: null,
         listJSON: null,
+        order: null,
         popoverText: null,
         title: null,
       }
@@ -34,7 +38,6 @@ const EntriesExperience = ({
         </div>
       )
     })
-
     return jsx
   }
 
