@@ -9,6 +9,7 @@ Currently [based on this design](https://dribbble.com/shots/15367483-Resume-circ
 - **Tailwind** - PostCSS 7 compatibility, this includes Tailwind 2.0 stuff though
 - **Contentful API** - need `.env` vars `CONTENTFUL_SPACE` and `CONTENTFUL_ACCESS_TOKEN`
 - **React Transition Group** - for some transitions
+- **React Markdown** - for some Contentful content
 
 ## Dev
 ```
