@@ -14,13 +14,24 @@
       transform: scale(3);
     }
   }
+  @keyframes loader {
+    0% {
+      transform: translateX(0%);
+    }
+    50% {
+      transform: translateX(200%);
+    }
+    100% {
+      transform: translateX(200%);
+    }
+  }
 
   html {
-    @apply h-full;
+    @apply min-h-screen;
   }
 
   body {
-    @apply bg-body min-h-full letter:px-8 letter:pt-8 letter:pb-20;
+    @apply bg-body min-h-screen;
   }
 
   a {
