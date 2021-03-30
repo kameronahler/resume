@@ -23,7 +23,7 @@ const useGetListJSX = ({
       entryProps.listJSON = post.fields.listJSON
 
       return (
-        <div key={post.sys.id} className='mb-5 last:mb-0 letter:mb-0'>
+        <div key={post.sys.id} className='py-4 first:pt-0 last:pb-0 letter:p-0'>
           <Entry {...entryProps} />
         </div>
       )

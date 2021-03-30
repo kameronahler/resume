@@ -1,8 +1,74 @@
 .popover {
   &__overlay {
-    @apply bg-popover-overlay fixed h-screen left-0 top-0 w-screen z-20;
+    @apply bg-popover-overlay
+      cursor-pointer
+      fixed
+      h-screen
+      left-0
+      top-0
+      w-screen
+      z-20;
 
     opacity: 0.95;
+  }
+
+  &__button {
+    @apply duration-200 ease-in-out transform transition-transform;
+
+    &--expanded {
+      @apply relative text-primary z-30;
+
+      &::before {
+        @apply animate-none hidden;
+      }
+    }
+
+    &:hover,
+    &--expanded {
+      @apply text-primary translate-x-1;
+
+      background: -webkit-linear-gradient(
+        45deg,
+        var(--color-primary),
+        var(--color-primary-light)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &::before {
+      @apply -left-1 absolute bg-primary h-2 rounded-full top-px transform scale-0 w-2;
+
+      content: '';
+
+      .section:hover &,
+      .app-header:hover & {
+        animation: popover-ping 1.5s ease-out infinite;
+      }
+    }
+  }
+
+  &__button-close {
+    @apply bg-primary
+      duration-200
+      ease-in-out
+      fixed
+      flex
+      leading-none
+      p-4
+      right-8
+      rounded-full
+      text-white
+      transition-transform
+      top-8;
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+  &__button-close-svg {
+    @apply flex h-4 items-center justify-center w-4;
   }
 
   &__content {
@@ -14,6 +80,7 @@
       mt-4
       opacity-100
       p-8
+      w-full
       z-30;
 
     box-shadow: 0 0.125rem 1rem -0.375rem rgba(0, 0, 0, 0.1),
@@ -32,65 +99,13 @@
       @apply mb-2;
     }
 
+    h3 {
+      @apply text-base;
+    }
+
     p,
     ul {
       @apply mb-4 last:mb-0;
     }
-  }
-
-  &__button {
-    @apply duration-200 ease-in-out;
-
-    transition-property: transform;
-
-    &--expanded {
-      @apply focus:outline-none relative text-primary z-30;
-    }
-
-    &:hover,
-    &:focus,
-    &--expanded {
-      @apply translate-x-1 text-primary transform;
-    }
-
-    &::before {
-      @apply -left-2
-        -top-1/4
-        -z-1
-        absolute
-        bg-section-accent
-        duration-300
-        ease-in-out
-        h-2/3
-        opacity-0
-        w-20;
-
-      content: '';
-      transition-property: opacity;
-
-      .app:hover & {
-        @apply opacity-100;
-      }
-    }
-  }
-
-  &__button-close {
-    @apply bg-primary
-      fixed
-      flex
-      leading-none
-      p-4
-      right-8
-      rounded-full
-      text-white
-      top-8;
-  }
-
-  &__button-close-svg {
-    @apply flex h-4 items-center justify-center w-4;
-  }
-
-  &__overlay {
-    @apply cursor-pointer;
   }
 }

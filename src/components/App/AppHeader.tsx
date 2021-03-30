@@ -1,9 +1,9 @@
 import React, { useRef } from 'react'
 import DarkModeButton from '../DarkMode/DarkMode'
-import PopoverButton from '../Popover/PopoverOpen'
+import Popover from '../Popover/PopoverOpen'
 
 const AppHeader = () => {
-  const targettedRef = useRef(null)
+  const targettedRef = useRef<HTMLButtonElement>(null)
 
   return (
     <header className='app-header'>
@@ -11,9 +11,9 @@ const AppHeader = () => {
       <div className='app-header__intro'>
         <h1 className='app-header__h1'>Kameron Ahler</h1>
         <div className='relative mt-2'>
-          <PopoverButton ref={targettedRef}>
-            <p className='lead'>Product designer & developer</p>
-          </PopoverButton>
+          <Popover ref={targettedRef}>
+            <p className='app-header__lead'>Product designer & developer</p>
+          </Popover>
           <div
             aria-expanded='false'
             ref={targettedRef}

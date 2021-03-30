@@ -1,10 +1,14 @@
 .darkmode-button {
-  --heightButton: 1.75rem;
-  --switchSize: calc((var(--heightButton) - 0.25rem));
-  --widthButton: 3.25rem;
+  --heightButton: 2rem;
+  --switchSize: calc((var(--heightButton) - 0.5rem));
+  --widthButton: 3.5rem;
 
   @apply absolute
-    bg-primary-light
+    bg-bg-accent
+    border
+    border-transparent
+    duration-200
+    ease-in-out
     flex
     items-center
     p-1
@@ -12,6 +16,12 @@
     rounded-full
     top-1.5
     z-0;
+
+  transition-property: border;
+
+  &:hover {
+    @apply border-primary;
+  }
 
   height: var(--heightButton);
   width: var(--widthButton);
@@ -21,16 +31,29 @@
   }
 
   &__switch-handle {
-    @apply bg-primary duration-200 ease-in-out inline-flex rounded-full;
+    @apply bg-primary
+      duration-200
+      ease-in-out
+      inline-flex
+      rounded-full;
 
     height: var(--switchSize);
     transition-property: transform;
     width: var(--switchSize);
 
-    &--enabled {
+    .darkmode-button:active & {
+      transform: scale(0.9);
+    }
+
+    &--disabled {
       transform: translateX(
-        calc(var(--widthButton) - var(--switchSize) - 0.5rem)
+        calc(var(--widthButton) - var(--switchSize) - 0.625rem)
       );
+
+      .darkmode-button:active & {
+        transform: scale(0.9)
+          translateX(calc(var(--widthButton) - var(--switchSize) - 0.5rem));
+      }
     }
   }
 

@@ -1,6 +1,6 @@
 .entry-list {
   &__item {
-    @apply gap-x-4 grid items-start;
+    @apply gap-x-3 grid items-start letter:gap-x-4;
 
     grid-template-columns: auto minmax(0, 1fr);
   }

@@ -1,20 +1,30 @@
 @tailwind base;
 
 @layer base {
+  @keyframes popover-ping {
+    0% {
+      opacity: 1;
+      transform: scale(0);
+    }
+    25% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(3);
+    }
+  }
+
   html {
     @apply h-full;
   }
 
   body {
-    @apply min-h-full;
-  }
-
-  body {
-    @apply bg-body p-4 letter:px-8 letter:pt-8 letter:pb-20;
+    @apply bg-body min-h-full letter:px-8 letter:pt-8 letter:pb-20;
   }
 
   a {
-    @apply text-primary hover:underline;
+    @apply hover:text-primary;
   }
 
   a,

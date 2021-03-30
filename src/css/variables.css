@@ -4,8 +4,8 @@
   --color-body: #f8f8f8;
   --color-popover-overlay: #ffffff;
   --color-popover-bg: #ffffff;
-  --color-primary-light: #ecebf5;
   --color-primary: #4c36d3;
+  --color-primary-light: #9988ff;
   --color-section-accent: #ecebf5;
   --color-text: #252427;
 }
@@ -15,8 +15,8 @@ body.dark-mode {
   --color-bg: #020202;
   --color-body: #14121c;
   --color-popover-overlay: #0e0e0e;
-  --color-popover-bg: #120f1f;
-  --color-primary-light: #ecebf5;
+  --color-popover-bg: #161329;
+  --color-primary-light: #a293ff;
   --color-primary: #7761ff;
   --color-section-accent: #1b172d;
   --color-text: #d6d3e5;

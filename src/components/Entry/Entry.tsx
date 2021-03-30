@@ -1,9 +1,10 @@
 import React, { useRef } from 'react'
 import ReactMarkdown from 'react-markdown'
+
 import { PropsEntry } from '../../store/Types'
 import EntryYear from './EntryYear'
 import EntryList from './EntryList'
-import PopoverButton from '../Popover/PopoverOpen'
+import PopoverOpen from '../Popover/PopoverOpen'
 
 const Entry = ({
   dateEnd,
@@ -14,16 +15,16 @@ const Entry = ({
   title,
   titleDesktopHidden,
 }: PropsEntry) => {
-  const hasDate = dateEnd && dateStart
-  const targettedRef = useRef(null)
+  const targettedRef = useRef<HTMLDivElement>(null)
 
+  const hasDate = dateEnd && dateStart
   return (
     <section className='entry'>
       {title && (
         <header className='relative'>
           {popoverText ? (
             <>
-              <PopoverButton ref={targettedRef}>
+              <PopoverOpen ref={targettedRef}>
                 <h3
                   className={`entry__heading ${
                     titleDesktopHidden ? 'entry__heading--desktop-hidden' : ''
@@ -31,7 +32,7 @@ const Entry = ({
                 >
                   {title}
                 </h3>
-              </PopoverButton>
+              </PopoverOpen>
               <div
                 aria-expanded='false'
                 ref={targettedRef}

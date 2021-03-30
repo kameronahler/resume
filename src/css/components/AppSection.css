@@ -1,23 +1,29 @@
 .section {
-  @apply mb-10 last:mb-0 letter:gap-x-4 letter:grid letter:grid-cols-12;
+  @apply border-b
+    border-section-accent
+    py-5
+    first:pt-0
+    last:pb-0
+    letter:border-b-0
+    letter:gap-x-4
+    letter:grid
+    letter:grid-cols-12;
 
+  &:last-of-type {
+    @apply border-b-0;
+  }
   &__header {
     @apply mb-4 letter:col-span-3 letter:mb-0;
   }
 
   &__heading {
-    @apply relative z-0;
+    @apply inline-block relative z-0;
 
     &::before {
       content: '';
 
-      @apply -left-2
-        -top-1/4
-        -z-1
-        absolute
-        bg-section-accent
-        h-3/4
-        w-full
+      @apply letter:-z-1
+        letter:absolute
         letter:bg-primary
         letter:-bottom-3
         letter:h-0.5

@@ -6,6 +6,7 @@
     px-8
     relative
     z-0
+    w-full
     letter:w-letter;
 
   box-shadow: 0 3rem 3rem -2rem rgba(0, 0, 0, 0.1),

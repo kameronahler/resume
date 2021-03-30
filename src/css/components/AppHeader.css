@@ -1,5 +1,5 @@
 .app-header {
-  @apply mb-8 relative letter:flex letter:mb-14;
+  @apply pb-8 relative letter:flex letter:pb-14;
 
   &__intro {
     @apply letter:flex-grow;
@@ -7,23 +7,46 @@
 
   &__h1 {
     @apply pr-16;
+
+    letter-spacing: -0.015625em;
+  }
+
+  &__lead {
+    @apply leading-tight text-lead text-left;
+
+    letter-spacing: -0.015625em;
   }
 
   &__external-link-wrapper {
-    @apply mt-2
+    @apply mt-1
       letter:flex
       letter:flex-col
       letter:flex-shrink-0
-      letter:justify-end
-      letter:mt-0;
+      letter:justify-end;
   }
 
   &__external-link {
-    @apply inline-flex items-center leading-none;
+    @apply inline-flex items-center leading-tight;
+
+    &:hover {
+      background: -webkit-linear-gradient(
+        45deg,
+        var(--color-primary),
+        var(--color-primary-light)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   &__external-link-svg {
-    @apply w-3 ml-1 inline-block h-3 ease-in-out duration-200;
+    @apply duration-200
+      ease-in-out
+      h-3
+      inline-block
+      ml-1
+      transition-transform
+      w-3;
 
     .app-header__external-link:hover & {
       transform: translate(0.125rem, -0.125rem);

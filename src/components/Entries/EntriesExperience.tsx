@@ -33,7 +33,10 @@ const EntriesExperience = ({
       })
 
       return (
-        <div key={post.sys.id} className='mb-8 last:mb-0 letter:mb-9'>
+        <div
+          key={post.sys.id}
+          className='py-4 first:pt-0 last:pb-0 letter:py-5'
+        >
           <Entry {...entryProps} />
         </div>
       )

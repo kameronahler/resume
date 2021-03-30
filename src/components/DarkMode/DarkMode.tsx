@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
 
+const TOGGLE_BODY_CLASS = 'dark-mode'
+
 const DarkModeButton = () => {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(true)
 
   const handleClick = () => {
-    document.body.classList.toggle('dark-mode')
+    document.body.classList.toggle(TOGGLE_BODY_CLASS)
     setDarkMode(!darkMode)
   }
 
@@ -16,11 +18,11 @@ const DarkModeButton = () => {
           {darkMode ? 'Turn light mode on' : 'Turn dark mode on'}
         </span>
         <CSSTransition
-          in={darkMode}
+          in={!darkMode}
           timeout={250}
           classNames={{
-            enter: 'darkmode-button__switch-handle--enabled',
-            enterDone: 'darkmode-button__switch-handle--enabled',
+            enter: 'darkmode-button__switch-handle--disabled',
+            enterDone: 'darkmode-button__switch-handle--disabled',
           }}
         >
           <span className='darkmode-button__switch-handle'>
