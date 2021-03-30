@@ -15,6 +15,22 @@
   &__button {
     @apply duration-200 ease-in-out transform transition-transform;
 
+    background: -webkit-linear-gradient(
+      45deg,
+      var(--color-primary),
+      var(--color-primary-light)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @media (min-width: 8.5in) {
+      background-image: unset;
+      background-clip: unset;
+      -webkit-background-clip: unset;
+      -webkit-text-fill-color: unset;
+    }
+
     &--expanded {
       @apply relative text-primary z-30;
 
@@ -32,6 +48,7 @@
         var(--color-primary),
         var(--color-primary-light)
       );
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
