@@ -22,15 +22,17 @@
     &::before {
       content: '';
 
-      @apply letter:-z-1
-        letter:absolute
-        letter:bg-primary
+      @apply -left-4
+        -z-1
+        absolute
+        bg-primary
+        h-6
+        rounded-full
+        w-0.5
         letter:-bottom-3
+        letter:w-8
         letter:h-0.5
-        letter:rounded-full
-        letter:left-0
-        letter:top-auto
-        letter:w-8;
+        letter:left-0;
     }
   }
 

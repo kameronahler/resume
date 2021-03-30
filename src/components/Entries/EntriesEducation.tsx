@@ -15,6 +15,7 @@ const EntriesEducation = ({
     const jsx = educationPosts.map((post: InterfaceContentfulPost) => {
       const entryProps = {
         description: null,
+        popoverText: null,
         title: null,
       }
       Object.keys(entryProps).forEach(key => {
