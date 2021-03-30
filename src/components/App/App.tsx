@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react'
 import { createClient } from 'contentful'
 
 import { TypeContentfulPosts } from '../../store/Types'
+import AppExternalLinks from './AppExternalLinks'
+import AppHeader from './AppHeader'
+import AppLoader from './AppLoader'
+import AppSection from './AppSection'
 import EntriesEducation from '../Entries/EntriesEducation'
 import EntriesExperience from '../Entries/EntriesExperience'
 import EntriesSkills from '../Entries//EntriesSkills'
 import EntriesTools from '../Entries//EntriesTools'
-import AppHeader from './AppHeader'
-import AppSection from './AppSection'
-import AppLoader from './AppLoader'
 
 // contentful statics
 const CONTENTFUL_SPACE = process.env.CONTENTFUL_SPACE
@@ -55,7 +56,8 @@ const App = () => {
     <>
       {contentfulPosts ? (
         <>
-          <div className='letter:pb-20 letter:pt-8 letter:px-8'>
+          <div className='letter:pb-20 letter:px-8'>
+            <AppExternalLinks />
             <div id='app' className='app'>
               <svg
                 aria-hidden='true'

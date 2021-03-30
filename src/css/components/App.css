@@ -1,9 +1,7 @@
 .app {
   @apply bg-bg
     m-auto
-    pb-8
-    pt-10
-    px-8
+    p-8
     relative
     z-0
     w-full

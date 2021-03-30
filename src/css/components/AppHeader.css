@@ -16,44 +16,4 @@
 
     letter-spacing: -0.015625em;
   }
-
-  &__external-link-wrapper {
-    @apply mt-1
-      letter:flex
-      letter:flex-col
-      letter:flex-shrink-0
-      letter:justify-end;
-  }
-
-  &__external-link {
-    @apply inline-flex items-center leading-tight;
-
-    &:hover {
-      background: -webkit-linear-gradient(
-        45deg,
-        var(--color-primary),
-        var(--color-primary-light)
-      );
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
-
-  &__external-link-svg {
-    @apply duration-200
-      ease-in-out
-      h-4
-      inline-block
-      ml-1
-      relative
-      transition-transform
-      w-4;
-    bottom: -0.125rem;
-
-    .app-header__external-link:hover & {
-      transform: translate(0.125rem, -0.125rem);
-      transition-properties: transform;
-    }
-  }
 }
