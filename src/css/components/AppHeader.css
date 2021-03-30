@@ -42,11 +42,13 @@
   &__external-link-svg {
     @apply duration-200
       ease-in-out
-      h-3
+      h-4
       inline-block
       ml-1
+      relative
       transition-transform
-      w-3;
+      w-4;
+    bottom: -0.125rem;
 
     .app-header__external-link:hover & {
       transform: translate(0.125rem, -0.125rem);
