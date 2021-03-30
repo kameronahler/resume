@@ -1,10 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { CSSTransition } from 'react-transition-group'
 
 const TOGGLE_BODY_CLASS = 'dark-mode'
 
 const DarkModeButton = () => {
   const [darkMode, setDarkMode] = useState(true)
+
+  useEffect(() => {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.body.classList.add(TOGGLE_BODY_CLASS)
+    } else {
+      setDarkMode(false)
+    }
+  }, [])
 
   const handleClick = () => {
     document.body.classList.toggle(TOGGLE_BODY_CLASS)
