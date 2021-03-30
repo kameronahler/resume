@@ -10,7 +10,7 @@
   }
 
   h1 {
-    @apply text-h1;
+    @apply text-4xl letter:text-h1;
   }
 
   h2 {
