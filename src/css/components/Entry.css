@@ -3,9 +3,11 @@
 
   @apply relative;
 
-  &__heading {
+  &__header {
     width: calc(100% - var(--width-date));
+  }
 
+  &__heading {
     &--desktop-hidden {
       @apply letter:sr-only;
     }
