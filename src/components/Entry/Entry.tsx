@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown'
 import { PropsEntry } from '../../store/Types'
 import EntryYear from './EntryYear'
 import EntryList from './EntryList'
-import PopoverOpen from '../Popover/PopoverOpen'
+import PopoverButton from '../Popover/PopoverButton'
 
 const Entry = ({
   dateEnd,
@@ -24,7 +24,7 @@ const Entry = ({
         <header className='relative'>
           {popoverText ? (
             <>
-              <PopoverOpen ref={targettedRef}>
+              <PopoverButton ref={targettedRef}>
                 <h3
                   className={`entry__heading ${
                     titleDesktopHidden ? 'entry__heading--desktop-hidden' : ''
@@ -32,11 +32,11 @@ const Entry = ({
                 >
                   {title}
                 </h3>
-              </PopoverOpen>
+              </PopoverButton>
               <div
                 aria-expanded='false'
                 ref={targettedRef}
-                className='popover__content popover__content--collapsed'
+                className='popover__content popover__content--markdown'
               >
                 <ReactMarkdown source={`${popoverText}`} />
               </div>

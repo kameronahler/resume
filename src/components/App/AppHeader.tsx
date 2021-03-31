@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import DarkModeButton from '../DarkMode/DarkMode'
-import Popover from '../Popover/PopoverOpen'
+import Popover from '../Popover/PopoverButton'
 import ReactMarkdown from `react-markdown`
 
 const LEAD_TEXT = `
@@ -28,7 +28,7 @@ const AppHeader = () => {
           <div
             aria-expanded='false'
             ref={targettedRef}
-            className='popover__content popover__content--collapsed'
+            className='popover__content popover__content--markdown'
           >
             <ReactMarkdown>{LEAD_TEXT}</ReactMarkdown>
           </div>
