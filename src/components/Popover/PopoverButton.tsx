@@ -53,6 +53,7 @@ const PopoverButton = forwardRef((props: object, ref: any) => {
         {props.children}
       </button>
       <button
+        aria-label='Close more info'
         onClick={handleClose}
         className={`popover__close ${
           expanded ? 'popover__close--expanded' : ''
