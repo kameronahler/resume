@@ -1,6 +1,8 @@
 # Interactive resume thingy
 Currently [based on this design](https://dribbble.com/shots/15367483-Resume-circa-2021), using content from Contentful.
 
+[Check it out on Netlify](https://kamerons-resume.netlify.app/)
+
 ## Technologies
 - **Parcel** - for build/local (this is buggy at the moment - the cache is annoying, and I'm hoping it's because of backwards compatibility Tailwind stuff)
 - **React** - not cra
