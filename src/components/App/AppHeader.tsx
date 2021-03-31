@@ -4,13 +4,11 @@ import Popover from '../Popover/PopoverButton'
 import ReactMarkdown from `react-markdown`
 
 const LEAD_TEXT = `
-### Wot?
+### This again? Can such a thing even be?
 
-I know, not this convo again, right? I started out as a designer, then UI designer,
-then UX designer, but the one thing that never changed was that I was always
-coding.
+I know, right? Will society allow it?
 
-I guess you could think of me as a fun-sized design unicorn.
+I've gravitated more and more toward development the longer I've been a designer. You could say I'm a developer's designer, or a  fun-sized design unicorn. I prefer to help implement what I've designed; bridging the gap between design and engineering is really satisfying.
 `
 
 const AppHeader = () => {
