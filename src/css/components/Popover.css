@@ -109,6 +109,10 @@
     transform: translateY(0);
     transition-property: opacity, transform;
 
+    &--right-hand-side {
+      @apply letter:left-auto letter:right-0;
+    }
+
     &--collapsed {
       @apply invisible opacity-0;
       transform: translateY(-2rem);
