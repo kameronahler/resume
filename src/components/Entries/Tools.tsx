@@ -1,21 +1,23 @@
 import React from 'react'
 
-import { TypeContentfulPosts } from '../../store/Types'
+import { TypeContentfulPosts } from '../../store/types'
 import useFilterPostsByTag from '../../hooks/useFilterPostsByTag'
 import useGetListJSX from '../../hooks/useGetListJSX'
 
-const EntriesSkills = ({
+const Tools = ({
   contentfulPosts,
 }: {
   contentfulPosts: TypeContentfulPosts
 }) => {
   const designJSX = useGetListJSX({
-    posts: useFilterPostsByTag(contentfulPosts, 'skillsDesign'),
+    posts: useFilterPostsByTag(contentfulPosts, 'toolsDesign'),
     heading: 'Design',
+    headingDesktopHidden: true,
   })
   const devJSX = useGetListJSX({
-    posts: useFilterPostsByTag(contentfulPosts, 'skillsDev'),
+    posts: useFilterPostsByTag(contentfulPosts, 'toolsDev'),
     heading: 'Dev',
+    headingDesktopHidden: true,
   })
 
   return (
@@ -26,4 +28,4 @@ const EntriesSkills = ({
   )
 }
 
-export default EntriesSkills
+export default Tools

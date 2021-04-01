@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { InterfaceContentfulPost } from '../store/Types'
+import { InterfaceContentfulPost } from '../store/types'
 import Entry from '../components/Entry/Entry'
 
 const useGetListJSX = ({

@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import ReactMarkdown from 'react-markdown'
 
-import { PropsEntry } from '../../store/Types'
+import { PropsEntry } from '../../store/types'
 import EntryYear from './EntryYear'
 import EntryList from './EntryList'
 import PopoverButton from '../Popover/PopoverButton'

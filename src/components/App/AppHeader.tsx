@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import DarkModeButton from '../DarkMode/DarkMode'
+import DarkModeButton from '../DarkModeButton/DarkModeButton'
 import Popover from '../Popover/PopoverButton'
 import ReactMarkdown from `react-markdown`
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { PropsAppSection } from '../../store/Types'
+import { PropsAppSection } from '../../store/types'
 
 const AppSection: React.FC<PropsAppSection> = ({ children, heading }) => {
   return (

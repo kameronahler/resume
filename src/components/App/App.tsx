@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { createClient } from 'contentful'
 
-import { TypeContentfulPosts } from '../../store/Types'
+import { TypeContentfulPosts } from '../../store/types'
 import AppExternalLinks from './AppExternalLinks'
 import AppHeader from './AppHeader'
 import AppLoader from './AppLoader'
 import AppSection from './AppSection'
-import EntriesEducation from '../Entries/EntriesEducation'
-import EntriesExperience from '../Entries/EntriesExperience'
-import EntriesSkills from '../Entries//EntriesSkills'
-import EntriesTools from '../Entries//EntriesTools'
+import Education from '../Entries/Education'
+import Experience from '../Entries/Experience'
+import Skills from '../Entries//Skills'
+import Tools from '../Entries//Tools'
 
 // contentful statics
 const CONTENTFUL_SPACE = process.env.CONTENTFUL_SPACE
@@ -70,16 +70,16 @@ const App = () => {
               </svg>
               <AppHeader />
               <AppSection heading='Experience'>
-                <EntriesExperience contentfulPosts={contentfulPosts} />
+                <Experience contentfulPosts={contentfulPosts} />
               </AppSection>
               <AppSection heading='Skills'>
-                <EntriesSkills contentfulPosts={contentfulPosts} />
+                <Skills contentfulPosts={contentfulPosts} />
               </AppSection>
               <AppSection heading='Tools'>
-                <EntriesTools contentfulPosts={contentfulPosts} />
+                <Tools contentfulPosts={contentfulPosts} />
               </AppSection>
               <AppSection heading='Education'>
-                <EntriesEducation contentfulPosts={contentfulPosts} />
+                <Education contentfulPosts={contentfulPosts} />
               </AppSection>
               <svg
                 aria-hidden='true'

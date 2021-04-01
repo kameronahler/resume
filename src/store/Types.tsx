@@ -12,7 +12,7 @@ export interface InterfaceContentfulPost {
   }
   sys: { id: string }
 }
-export interface PropsEntriesExperience {
+export interface PropsExperience {
   dateEnd?: string
   dateStart?: string
   description?: string

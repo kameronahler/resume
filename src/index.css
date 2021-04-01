@@ -1,6 +1,17 @@
+/* base */
 @import './css/variables.css';
 @import './css/base.css';
 @import './css/typography.css';
-@import './css/components.css';
+
+/* components */
+@tailwind components;
+@import './components/App/App.css';
+@import './components/App/AppHeader.css';
+@import './components/App/AppLoader.css';
+@import './components/App/AppSection.css';
+@import './components/DarkModeButton/DarkModeButton.css';
+@import './components/Entry/Entry.css';
+@import './components/Entry/EntryList.css';
+@import './components/Popover/Popover.css';
 
 @tailwind utilities;
