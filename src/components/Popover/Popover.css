@@ -12,37 +12,14 @@
     opacity: 0.95;
   }
 
-  &__open {
+  &__button {
     @apply duration-200 ease-in-out text-left transform transition-transform;
 
-    background: -webkit-linear-gradient(
-      45deg,
-      var(--color-primary),
-      var(--color-primary-light)
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    &::before {
+      @apply -left-1 absolute bg-primary h-2 rounded-full top-px transform scale-0 w-2;
 
-    @media (min-width: 8.5in) {
-      background-image: unset;
-      background-clip: unset;
-      -webkit-background-clip: unset;
-      -webkit-text-fill-color: unset;
-    }
-
-    &:hover,
-    &--expanded {
-      @apply text-primary;
-
-      background: -webkit-linear-gradient(
-        45deg,
-        var(--color-primary),
-        var(--color-primary-light)
-      );
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      animation: popover-ping 1.5s ease-out infinite;
+      content: '';
     }
 
     &--expanded {
@@ -52,16 +29,37 @@
         @apply animate-none hidden;
       }
     }
+  }
 
-    &::before {
-      @apply -left-1 absolute bg-primary h-2 rounded-full top-px transform scale-0 w-2;
+  &__button-inner {
+    background: linear-gradient(
+      45deg,
+      var(--color-primary),
+      var(--color-primary-light)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
-      content: '';
+    @media (min-width: 8.5in) {
+      background: unset;
+      background-clip: unset;
+      -webkit-background-clip: unset;
+      -webkit-text-fill-color: unset;
+    }
 
-      .section:hover &,
-      .app-header:hover & {
-        animation: popover-ping 1.5s ease-out infinite;
-      }
+    .popover__button:hover &,
+    .popover__button--expanded & {
+      @apply text-primary;
+
+      background: linear-gradient(
+        45deg,
+        var(--color-primary),
+        var(--color-primary-light)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 
