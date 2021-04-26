@@ -22,7 +22,7 @@ const AppHeader = () => {
         <div className='relative mt-2'>
           <Popover ref={targettedRef}>
             <p className='app-header__lead  popover__button-inner'>
-              Product designer & developer
+              Product designer & UI developer
             </p>
           </Popover>
           <div
